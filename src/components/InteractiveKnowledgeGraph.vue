@@ -259,7 +259,7 @@ const generateDataPoints = (node: Node) => {
 
 const generateParticles = () => {
   particles.length = 0
-  links.forEach((link, index) => {
+  links.forEach((link, _) => {
     particles.push({
       size: 1.5,
       color: '#8b5cf6',
@@ -355,7 +355,7 @@ const pulseNode = (index: number) => {
 
 const triggerPulse = () => {
   // Create global pulse effect
-  nodes.forEach((node, index) => {
+  nodes.forEach((_, index) => {
     setTimeout(() => {
       pulseNode(index)
     }, index * 200)

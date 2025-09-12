@@ -4,7 +4,7 @@ export function useScrollAnimation() {
   const observedElements = ref<Set<Element>>(new Set())
   const observer = ref<IntersectionObserver | null>(null)
 
-  const animateOnScroll = (element: Element, animationClass: string = 'animate-fade-in-up') => {
+  const animateOnScroll = (element: Element) => {
     if (!element) return
 
     // Add initial state
