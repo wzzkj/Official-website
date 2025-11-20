@@ -7,10 +7,10 @@
           <!-- Logo -->
           <div class="flex items-center space-x-2">
             <div
-              class="w-8 h-8 bg-gradient-to-r from-reflect-purple to-reflect-purple-light rounded-lg flex items-center justify-center">
-              <img src="../public/tb.png" alt="">
+              class=" h-8 bg-gradient-to-r from-reflect-purple to-reflect-purple-light rounded-lg flex items-center justify-center">
+              <img src="../public/tp1.png" style="width:80px; height: 80px;" alt="">
             </div>
-            <span class="text-xl font-semibold text-white ">未知者</span>
+            <span class="text-xl font-semibold text-white ">未知者科技</span>
           </div>
           <!-- Auth Buttons -->
           <div class="  items-center space-x-4">
@@ -21,20 +21,14 @@
     </header>
 
     <main>
-       <section class="pt-32 pb-16 relative overflow-hidden">
+      <section class="pt-32 pb-16 relative overflow-hidden">
         <div class="container-custom relative z-10">
-        
-          <div class="mx-auto max-w-5xl group shadow-2xl shadow-reflect-purple/20 rounded-2xl overflow-hidden border border-white/10 md:relative">
-            
+
+          <div
+            class="mx-auto max-w-5xl group shadow-2xl shadow-reflect-purple/20 rounded-2xl overflow-hidden border border-white/10 md:relative">
             <!-- 1. 背景视频 (保持不变) -->
-            <video 
-              autoplay 
-              loop 
-              muted 
-              playsinline 
-              class="w-full h-full object-cover"
-            >
-              <source src="../public/mp4/1.mp4" type="video/mp4">
+            <video ref="videoPlayer" autoplay loop muted playsinline class="w-full h-full object-cover">
+              <!-- 2. 移除 source 标签 -->
               您的浏览器不支持 video 标签。
             </video>
 
@@ -47,8 +41,9 @@
                 - md:bg-gradient-to-t ...: 我们在底部保留一个非常微妙的渐变，
                   这能让带有背景的文字更好地融入视频，视觉效果更佳。
             -->
-            <div class="text-center text-white p-6 md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-end md:pb-12 md:bg-gradient-to-t md:from-black/40 md:to-transparent">
-              
+            <div
+              class="text-center text-white p-6 md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-end md:pb-12 md:bg-gradient-to-t md:from-black/40 md:to-transparent">
+
               <!-- 副标题 1 -->
               <p class="text-xs sm:text-sm md:text-base lg:text-lg tracking-wide font-light">
                 <!-- 
@@ -65,7 +60,7 @@
                   60+人专业研发团队 | 3步需求梳理 | 16项流程标准管控 | 12项核心内容交付
                 </span>
               </p>
-              
+
               <!-- 副标题 2 -->
               <p class="mt-4 text-xs sm:text-sm md:text-base lg:text-lg tracking-wide font-light">
                 <span class="inline-block bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg leading-relaxed">
@@ -85,164 +80,166 @@
 
 
       <!-- Features Grid -->
-<section class="py-16 scroll-animate" id="product">
-  <div class="container-custom">
-    <div class="text-center mb-16 scroll-animate">
-      <h2
-        class="text-3xl md:text-4xl font-bold text-white mb-4 hover:scale-105 transition-transform duration-300 sound-hover">
-        核心<span
-          class="text-gradient hover:from-reflect-accent hover:to-reflect-purple-light transition-all duration-500 cursor-default">业务领域</span>
-      </h2>
-      <p class="text-xl text-reflect-text-muted max-w-3xl mx-auto hover:text-white transition-colors duration-300">
-        未知者科技为企业提供软件外包、系统设计、产品研发及技术咨询服务，并在预算范围内按时高质量交付项目，助力企业实现数字化转型。
-      </p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-animate">
-      <!-- Feature Card 1: 软件外包开发 -->
-      <div
-        class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
-        <div
-          class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
-          <svg
-            class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-          </svg>
-          <h3 style="margin-left: 10px;"
-            class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
-            软件外包开发</h3>
-        </div>
-        <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300">
-          我们提供全栈开发服务，精通Vue, React, Uni-App等前端框架，以及.Net, Java, PHP等后端技术，为您打造高性能、高可靠的应用程序。</p>
-      </div>
+      <section class=" " id="product">
+        <div class="container-custom">
+          <div class="text-center mb-16 scroll-animate">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-white mb-4 hover:scale-105 transition-transform duration-300 sound-hover">
+              核心<span
+                class="text-gradient hover:from-reflect-accent hover:to-reflect-purple-light transition-all duration-500 cursor-default">业务领域</span>
+            </h2>
+            <p
+              class="text-xl text-reflect-text-muted max-w-3xl mx-auto hover:text-white transition-colors duration-300">
+              未知者科技为企业提供软件外包、系统设计、产品研发及技术咨询服务，并在预算范围内按时高质量交付项目，助力企业实现数字化转型。
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-animate">
+            <!-- Feature Card 1: 软件外包开发 -->
+            <div
+              class="bg-white/5  rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
+              <div
+                class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                <h3 style="margin-left: 10px;"
+                  class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
+                  软件外包开发</h3>
+              </div>
+              <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300">
+                我们提供全栈开发服务，精通Vue, React, Uni-App等前端框架，以及.Net, Java, PHP等后端技术，为您打造高性能、高可靠的应用程序。</p>
+            </div>
 
-      <!-- Feature Card 2: 企业解决方案 -->
-      <div
-        class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
-        <div
-          class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
-          <svg
-            class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-          </svg>
-          <h3 style="margin-left: 10px;"
-            class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
-            企业解决方案</h3>
-        </div>
-        <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300">
-          深入理解行业需求，提供定制化的CRM, ERP, SCM等企业管理系统。采用微服务、容器化等先进架构，确保系统高可用和可扩展性。</p>
-      </div>
+            <!-- Feature Card 2: 企业解决方案 -->
+            <div
+              class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
+              <div
+                class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+                <h3 style="margin-left: 10px;"
+                  class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
+                  企业解决方案</h3>
+              </div>
+              <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300">
+                深入理解行业需求，提供定制化的CRM, ERP, SCM等企业管理系统。采用微服务、容器化等先进架构，确保系统高可用和可扩展性。</p>
+            </div>
 
-      <!-- Feature Card 3: 质量保证与支持 -->
-      <div
-        class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
-        <div
-          class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
-          <svg
-            class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h3 style="margin-left: 10px;"
-            class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
-            质量保证与支持</h3>
-        </div>
-        <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300">
-          提供从系统部署、安装调试到后期维护的全周期技术支持。通过严谨的测试流程，保障软件质量，确保系统稳定、安全、高效运行。</p>
-      </div>
+            <!-- Feature Card 3: 质量保证与支持 -->
+            <div
+              class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
+              <div
+                class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 style="margin-left: 10px;"
+                  class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
+                  质量保证与支持</h3>
+              </div>
+              <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300">
+                提供从系统部署、安装调试到后期维护的全周期技术支持。通过严谨的测试流程，保障软件质量，确保系统稳定、安全、高效运行。</p>
+            </div>
 
-      <!-- Feature Card 4: 一站式服务 -->
-      <div
-        class="card bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
-        <div
-          class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
-          <svg
-            class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-          </svg>
-          <h3 style="margin-left: 10px;"
-            class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
-            一站式服务</h3>
-        </div>
-        <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300 mb-4">
-          从需求沟通到源码交付，提供7×24小时极速响应，让您的创意光速变为现实，承诺100%源码交付。
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tag">APP开发</span>
-          <span class="tag">小程序</span>
-          <span class="tag">网页系统</span>
-          <span class="tag">企业门户</span>
-          <span class="tag">AI集成</span>
-          <span class="tag">自动化办公</span>
-        </div>
-      </div>
-      
-      <!-- NEW Feature Card 5: AI应用开发 -->
-      <div
-        class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
-        <div
-          class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
-          <svg
-            class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          <h3 style="margin-left: 10px;"
-            class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
-            AI应用开发</h3>
-        </div>
-        <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300 mb-4">
-          我们具有丰富的大模型应用与AIGC落地经验，能将前沿AI技术融入您的业务，构建独特的智能化产品与服务。
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tag">大语言模型</span>
-          <span class="tag">AIGC</span>
-          <span class="tag">智能客服</span>
-          <span class="tag">数据分析</span>
-          <span class="tag">机器学习</span>
-          <span class="tag">流程自动化</span>
-        </div>
-      </div>
+            <!-- Feature Card 4: 一站式服务 -->
+            <div
+              class="card bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
+              <div
+                class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+                <h3 style="margin-left: 10px;"
+                  class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
+                  一站式服务</h3>
+              </div>
+              <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300 mb-4">
+                从需求沟通到源码交付，提供7×24小时极速响应，让您的创意光速变为现实，承诺100%源码交付。
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag">APP开发</span>
+                <span class="tag">小程序</span>
+                <span class="tag">网页系统</span>
+                <span class="tag">企业门户</span>
+                <span class="tag">AI集成</span>
+                <span class="tag">自动化办公</span>
+              </div>
+            </div>
 
-      <!-- UPDATED Feature Card 6: 应用场景 -->
-      <div
-        class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
-        <div
-          class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
-          <svg
-            class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-          </svg>
-          <h3 style="margin-left: 10px;"
-            class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
-            应用场景</h3>
+            <!-- NEW Feature Card 5: AI应用开发 -->
+            <div
+              class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
+              <div
+                class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <h3 style="margin-left: 10px;"
+                  class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
+                  AI应用开发</h3>
+              </div>
+              <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300 mb-4">
+                我们具有丰富的大模型应用与AIGC落地经验，能将前沿AI技术融入您的业务，构建独特的智能化产品与服务。
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag">大语言模型</span>
+                <span class="tag">AIGC</span>
+                <span class="tag">智能客服</span>
+                <span class="tag">数据分析</span>
+                <span class="tag">机器学习</span>
+                <span class="tag">流程自动化</span>
+              </div>
+            </div>
+
+            <!-- UPDATED Feature Card 6: 应用场景 -->
+            <div
+              class="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-reflect-purple/20 group sound-hover sound-click cursor-pointer">
+              <div
+                class="jjfa w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-reflect-purple/30 transition-colors duration-300 group-hover:scale-110">
+                <svg
+                  class="w-6 h-6 text-reflect-purple group-hover:text-reflect-purple-light transition-colors duration-300"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+                <h3 style="margin-left: 10px;"
+                  class="text-lg font-semibold text-white group-hover:text-reflect-purple-light transition-colors duration-300">
+                  应用场景</h3>
+              </div>
+              <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300 mb-4">
+                我们为各行各业提供成熟的解决方案，覆盖全平台终端，助力您的业务在多领域开花结果。
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag">APP/小程序</span>
+                <span class="tag">H5/网站</span>
+                <span class="tag">高定UI商城</span>
+                <span class="tag">智慧物联网</span>
+                <span class="tag">本地服务</span>
+                <span class="tag">教育培训</span>
+                <span class="tag">可视化大屏</span>
+                <span class="tag">会员/ERP系统</span>
+                <span class="tag">物流/医疗</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="text-reflect-text-muted group-hover:text-reflect-text transition-colors duration-300 mb-4">
-          我们为各行各业提供成熟的解决方案，覆盖全平台终端，助力您的业务在多领域开花结果。
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tag">APP/小程序</span>
-          <span class="tag">H5/网站</span>
-          <span class="tag">高定UI商城</span>
-          <span class="tag">智慧物联网</span>
-          <span class="tag">本地服务</span>
-          <span class="tag">教育培训</span>
-          <span class="tag">可视化大屏</span>
-          <span class="tag">会员/ERP系统</span>
-          <span class="tag">物流/医疗</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <!-- Brain Superpowers Section -->
       <section class="py-20 relative">
@@ -285,7 +282,8 @@
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-reflect-purple/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg class="w-6 h-6 text-reflect-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z">
                     </path>
                   </svg>
                 </div>
@@ -335,7 +333,7 @@
               </div>
             </div>
             <div class="relative h-96">
-              <img src="../public/code01.jpg" alt="企业管理系统集成"
+              <img loading="lazy" src="../public/code01.jpg" alt="企业管理系统集成"
                 class="w-full h-full object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
             </div>
           </div>
@@ -346,7 +344,8 @@
       <section class="py-20 relative">
         <div class="container-custom">
           <div class="text-center mb-12">
-            <div class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm text-reflect-text-muted mb-6">
+            <div
+              class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm text-reflect-text-muted mb-6">
               <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
@@ -374,7 +373,8 @@
               <div class="border-t border-white/10"></div>
               <div>
                 <h3 class="text-2xl font-bold text-white mb-3 text-center">应用级别</h3>
-                <p class="font-mono text-sm text-reflect-text-muted text-center break-all">身份认证机制 | 角色权限控制 | 渗透测试 |
+                <p class="font-mono text-sm text-reflect-text-muted text-center break-all">身份认证机制 | 角色权限控制(RBAC) | 渗透测试
+                  |
                   详细日志追踪 | API接口鉴权</p>
               </div>
               <div class="border-t border-white/10"></div>
@@ -414,7 +414,7 @@
               class="bg-gradient-to-b from-white/10 to-white/5 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
               <div style="padding: 5px;"
                 class="bg-gradient-to-br from-reflect-purple/20 to-reflect-purple-light/20 rounded-lg p-12 text-center">
-                <img src="../public/ai.png" alt="AI赋能演示" class="rounded-lg shadow-xl">
+                <img src="../public/ai.png" loading="lazy" alt="AI赋能演示" class="rounded-lg shadow-xl">
               </div>
             </div>
           </div>
@@ -425,7 +425,8 @@
       <section class="py-20 relative">
         <div class="container-custom">
           <div class="text-center mb-12">
-            <div class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm text-reflect-text-muted mb-6">
+            <div
+              class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm text-reflect-text-muted mb-6">
               合作流程
             </div>
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -439,7 +440,7 @@
 
           <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <!-- Step 1 -->
-            <div class="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-reflect-purple transition-all">
+            <div class="bg-white/5  rounded-xl p-6 border border-white/10 hover:border-reflect-purple transition-all">
               <div class="text-3xl font-bold text-reflect-purple mb-2">01</div>
               <h3 class="text-lg font-semibold text-white mb-2">需求沟通与分析</h3>
               <p class="text-sm text-reflect-text-muted">深入了解您的业务目标与痛点，共同梳理和明确项目需求。</p>
@@ -515,7 +516,8 @@
       <section class="py-20 relative">
         <div class="container-custom">
           <div class="text-center mb-12">
-            <div class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm text-reflect-text-muted mb-6">
+            <div
+              class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm text-reflect-text-muted mb-6">
               客户之声
             </div>
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -578,23 +580,93 @@
         </div>
       </section>
 
+      <!-- 合作伙伴 -->
+      <section class="py-20 relative scroll-animate">
+        <div class="container-custom">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+              <span class="text-gradient">合作服务商</span>
+            </h2>
+            <!-- <p class="text-xl text-reflect-text-muted max-w-3xl mx-auto">
+        我们与全球顶尖的云服务提供商深度合作，为您的项目提供稳定、可靠的基础设施。
+      </p> -->
+          </div>
+          <div class="multi-marquee-container">
+            <div v-for="(row, rowIndex) in partnerRows" :key="rowIndex" class="partner-marquee-container"
+              :style="getRowStyle(rowIndex)">
+              <div class="partner-marquee-content">
+                <div v-for="partner in row" :key="partner.name + '-1'" class="partner-logo-item">
+                  <img :src="partner.logo"  :alt="partner.name" />
+                </div>
+                <div v-for="partner in row" :key="partner.name + '-2'" class="partner-logo-item">
+                  <img :src="partner.logo"  :alt="partner.name" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
       <!-- Pricing Section 隐藏 -->
       <section style="display: none;" class="py-20" id="pricing"></section>
 
-      <!-- Footer隐藏 -->
-      <footer style="display: none;" class="py-12 border-t border-white/10"></footer>
+      <!-- Footer -->
+      <footer class="py-12 border-t border-white/10">
+        <div class="container-custom text-center text-reflect-text-muted">
+
+          <!-- 主要信息: 联系方式与地址 -->
+          <div class="text-sm space-y-3">
+            <p>
+              <span>咨询热线：</span>
+              <a href="tel:13866661447" class="hover:text-white transition-colors">13866661447</a>
+
+            </p>
+            <p>
+              <span>合肥分公司地址：</span>合肥市瑶海区香格里拉国际中心A座1909室
+            </p>
+          </div>
+
+          <!-- 版权与备案信息 -->
+          <div class="pt-6 mt-6 border-t border-white/10 text-xs space-y-2">
+            <p>
+              Copyright © 2023-2025 www.hfwzz.com | 未知者科技(合肥)有限公司 版权所有
+            </p>
+            <div class="flex items-center justify-center space-x-4">
+              <span class="inline-flex items-center">
+                <img class="w-4 h-4 mr-1.5" loading="lazy" src="../public/tb/beian.webp" alt="">
+                网安备：等待备案
+              </span>
+              <br class="sm:hidden">
+              <a href="https://beian.miit.gov.cn/" target="_blank"
+                class="hover:text-reflect-purple-light transition-colors">
+                ICP:皖ICP备2025077290号-3
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </footer>
     </main>
   </div>
   <ContactModal :show="isModalVisible" @close="closeContactModal" />
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUpdated } from 'vue'
+import { ref, onMounted, onUpdated,defineAsyncComponent } from 'vue'
+
+import Hls from 'hls.js'
+
 import { useScrollAnimation } from './composables/useScrollAnimation'
 // 1. 导入我们新创建的 ContactModal 组件
-import ContactModal from './components/ContactModal.vue'
+const ContactModal = defineAsyncComponent(() => 
+  import('./components/ContactModal.vue')
+)
 
-
+// 2. 创建一个 ref 来引用 video 元素
+const videoPlayer = ref<HTMLVideoElement | null>(null)
 
 
 const { animateOnScroll } = useScrollAnimation()
@@ -611,6 +683,43 @@ const closeContactModal = () => {
   isModalVisible.value = false
 }
 
+
+// 1. 定义合作伙伴数据的 JSON 结构
+//    这是一个数组，每个元素代表一行。
+//    每一行又是一个数组，包含该行的合作伙伴对象。
+const partnerRows = ref([
+  // 第一行
+  [
+    { name: '阿里云', logo: '/logo/阿里云.svg' },
+    { name: '腾讯云', logo: '/logo/腾讯云.svg' },
+    { name: '华为云', logo: '/logo/华为云.svg' },
+    { name: 'google', logo: '/logo/google.svg' },
+  ],
+  // // 第二行
+  [
+    { name: '中国电信', logo: '/logo/中国电信.svg' },
+    { name: '中国移动', logo: '/logo/中国移动.svg' },
+    { name: '联想', logo: '/logo/联想.svg' },
+    { name: '华硕', logo: '/logo/华硕.svg' },
+    { name: '小米', logo: '/logo/小米.svg' }
+  ],
+  // // 第三行 
+  // [
+  //  { name: '阿里云', logo: '/logo/阿里云.svg' },
+  //   { name: '腾讯云', logo: '/logo/腾讯云.svg' },
+  //   { name: '华为云', logo: '/logo/华为云.svg' }
+  // ]
+]);
+
+// 2. 定义一个方法来根据行索引决定滚动方向
+const getRowStyle = (index: number) => {
+  // 如果是偶数行 (0, 2, 4...), 则反向滚动
+  if (index % 2 === 0) {
+    return { '--scroll-direction': 'reverse' };
+  }
+  // 奇数行默认方向
+  return {};
+};
 
 
 
@@ -645,6 +754,30 @@ const playClickSound = () => {
 }
 
 onMounted(() => {
+
+  // 3. 初始化 HLS 播放器
+  const videoSrc = '../m3u8/1.m3u8' // 您的 M3U8 文件路径
+
+  if (videoPlayer.value && Hls.isSupported()) {
+    const hls = new Hls({
+      maxBufferLength: 30, // 减少最大缓冲时长，节省带宽
+      maxMaxBufferLength: 60,
+      startLevel: -1, // 自动选择最佳起始清晰度
+      capLevelToPlayerSize: true, // 限制分辨率不超过播放器大小（节省流量）
+    })
+    hls.loadSource(videoSrc)
+    hls.attachMedia(videoPlayer.value)
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      // 在元数据加载后可以尝试播放，尽管您已经有 autoplay
+      videoPlayer.value?.play().catch(error => {
+        console.warn("Autoplay was prevented:", error)
+      });
+    });
+  } else if (videoPlayer.value?.canPlayType('application/vnd.apple.mpegurl')) {
+    // 这是为原生支持 HLS 的设备（如 Safari）准备的后备方案
+    videoPlayer.value.src = videoSrc;
+  }
+
   const sections = document.querySelectorAll('.scroll-animate')
   sections.forEach(section => {
     animateOnScroll(section)
@@ -754,9 +887,7 @@ body {
   color: transparent;
 }
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
 
 /* =================================================================
    2. Keyframes 核心动画帧定义
@@ -1159,5 +1290,85 @@ body {
 main {
   position: relative;
   z-index: 10;
+}
+
+/* 1. 定义滚动动画 (保持不变) */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 2. 多行主容器样式 */
+.multi-marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* 设置行与行之间的垂直间距 */
+}
+
+/* 3. 单行滚动容器样式 (保持不变) */
+.partner-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+}
+
+/* 4. 内容层样式 (核心改动) */
+.partner-marquee-content {
+  display: flex;
+  width: max-content;
+
+  /* 
+   * 应用动画: 
+   * - animation-duration: 滚动时长
+   * - animation-timing-function: 速度曲线
+   * - animation-iteration-count: 循环次数
+   * - animation-name: 动画名
+   * - animation-direction: 动画方向 (通过 CSS 变量控制)
+   */
+  animation: scroll-left 35s linear infinite;
+  animation-direction: var(--scroll-direction, normal);
+  /* 默认为 normal (正向) */
+}
+
+/* 5. 悬停暂停 (作用于主容器) */
+.multi-marquee-container:hover .partner-marquee-content {
+  animation-play-state: paused;
+}
+
+/* 6. 单个 Logo 容器样式 (保持不变) */
+.partner-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.5rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* 7. Logo 图片样式 (保持不变) */
+.partner-logo-item img {
+  max-width: 130px;
+  max-height: 45px;
+  object-fit: contain;
+  /* filter: grayscale(100%) brightness(0.8); */
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 8. Logo 悬停效果 (保持不变) */
+.partner-logo-item:hover {
+  transform: scale(1.1);
+}
+
+.partner-logo-item:hover img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
 }
 </style>
