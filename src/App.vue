@@ -756,7 +756,7 @@ const playClickSound = () => {
 onMounted(() => {
 
   // 3. 初始化 HLS 播放器
-  const videoSrc = '../m3u8/1.m3u8' // 您的 M3U8 文件路径
+  const videoSrc = '../m3u8/2/output.m3u8' // 您的 M3U8 文件路径
 
   if (videoPlayer.value && Hls.isSupported()) {
     const hls = new Hls({
