@@ -27,8 +27,17 @@
           <div
             class="mx-auto max-w-5xl group shadow-2xl shadow-reflect-purple/20 rounded-2xl overflow-hidden border border-white/10 md:relative">
             <!-- 1. 背景视频 (保持不变) -->
-            <video ref="videoPlayer" autoplay loop muted playsinline class="w-full h-full object-cover">
-              <!-- 2. 移除 source 标签 -->
+            <video ref="videoPlayer" 
+            autoplay 
+            webkit-playsinline="true" 
+            x5-playsinline="true"
+            x5-video-player-type="h5-page" 
+            x-webkit-airplay="allow" 
+            loop 
+            muted  
+            playsinline
+            poster="../public/视频封面.png" 
+            class="w-full h-full object-cover">
               您的浏览器不支持 video 标签。
             </video>
 
@@ -586,6 +595,7 @@
           <div class="text-center mb-12">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
               <span class="text-gradient">合作服务商</span>
+              <!-- 曾服务客户 -->
             </h2>
             <!-- <p class="text-xl text-reflect-text-muted max-w-3xl mx-auto">
         我们与全球顶尖的云服务提供商深度合作，为您的项目提供稳定、可靠的基础设施。
@@ -596,10 +606,12 @@
               :style="getRowStyle(rowIndex)">
               <div class="partner-marquee-content">
                 <div v-for="partner in row" :key="partner.name + '-1'" class="partner-logo-item">
-                  <img :src="partner.logo"  :alt="partner.name" />
+                  <img class="object-contain aspect-[3/1]" :src="partner.logo" 
+                decoding="async" :alt="partner.name" />
                 </div>
                 <div v-for="partner in row" :key="partner.name + '-2'" class="partner-logo-item">
-                  <img :src="partner.logo"  :alt="partner.name" />
+                  <img class="object-contain aspect-[3/1]" :src="partner.logo" 
+                decoding="async" :alt="partner.name" />
                 </div>
               </div>
             </div>
@@ -625,7 +637,7 @@
 
             </p>
             <p>
-              <span>合肥分公司地址：</span>合肥市瑶海区香格里拉国际中心A座1909室
+              <span>公司地址：</span>合肥市瑶海区香格里拉国际中心A座1909室
             </p>
           </div>
 
@@ -637,12 +649,12 @@
             <div class="flex items-center justify-center space-x-4">
               <span class="inline-flex items-center">
                 <img class="w-4 h-4 mr-1.5" loading="lazy" src="../public/tb/beian.webp" alt="">
-                网安备：等待备案
+                皖公网安备34010202602087号
               </span>
               <br class="sm:hidden">
               <a href="https://beian.miit.gov.cn/" target="_blank"
                 class="hover:text-reflect-purple-light transition-colors">
-                ICP:皖ICP备2025077290号-3
+                皖ICP备2025077290号-3
               </a>
             </div>
           </div>
@@ -655,13 +667,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUpdated,defineAsyncComponent } from 'vue'
+import { ref, onMounted, onUpdated, defineAsyncComponent } from 'vue'
 
 import Hls from 'hls.js'
 
 import { useScrollAnimation } from './composables/useScrollAnimation'
 // 1. 导入我们新创建的 ContactModal 组件
-const ContactModal = defineAsyncComponent(() => 
+const ContactModal = defineAsyncComponent(() =>
   import('./components/ContactModal.vue')
 )
 
@@ -701,14 +713,33 @@ const partnerRows = ref([
     { name: '中国移动', logo: '/logo/中国移动.svg' },
     { name: '联想', logo: '/logo/联想.svg' },
     { name: '华硕', logo: '/logo/华硕.svg' },
-    { name: '小米', logo: '/logo/小米.svg' }
+    { name: '小米', logo: '/logo/小米.svg' },
+    {name: '中国银行', logo: '/logo/中国银行.svg' }
   ],
   // // 第三行 
-  // [
-  //  { name: '阿里云', logo: '/logo/阿里云.svg' },
-  //   { name: '腾讯云', logo: '/logo/腾讯云.svg' },
-  //   { name: '华为云', logo: '/logo/华为云.svg' }
-  // ]
+  [
+   { name: '京东', logo: '/logo/京东.svg' },
+    { name: '科大讯飞', logo: '/logo/科大讯飞.svg' },
+    { name: '知乎', logo: '/logo/知乎.svg' },
+    { name: 'deepen', logo: '/logo/deepen.png' },
+    { name: '携程', logo: '/logo/携程.svg' },
+    { name: '美团', logo: '/logo/美团.svg' },
+  ],
+  // // 第四行
+  [
+    { name: '滴滴', logo: '/logo/滴滴.svg' },
+    { name: '拼多多', logo: '/logo/拼多多.svg' },
+    { name: '字节跳动', logo: '/logo/字节跳动-01.svg' },
+    { name: 'B站', logo: '/logo/B站.svg' }
+  ],
+  [
+    
+
+    { name: '微软', logo: '/logo/微软.svg' },
+    { name: '亚马逊', logo: '/logo/亚马逊.svg' },
+    { name: 'IBM', logo: '/logo/IBM.svg' },
+    { name: 'Oracle', logo: '/logo/Oracle.svg' }
+  ]
 ]);
 
 // 2. 定义一个方法来根据行索引决定滚动方向
@@ -754,29 +785,84 @@ const playClickSound = () => {
 }
 
 onMounted(() => {
+  const video = videoPlayer.value
+  if (!video) return
 
-  // 3. 初始化 HLS 播放器
-  const videoSrc = '../m3u8/2/output.m3u8' // 您的 M3U8 文件路径
+  // 1. JS 层面强制静音 (双重保险，防止标签属性失效)
+  video.muted = true
 
-  if (videoPlayer.value && Hls.isSupported()) {
-    const hls = new Hls({
-      maxBufferLength: 30, // 减少最大缓冲时长，节省带宽
-      maxMaxBufferLength: 60,
-      startLevel: -1, // 自动选择最佳起始清晰度
-      capLevelToPlayerSize: true, // 限制分辨率不超过播放器大小（节省流量）
+  // 2. 定义暴力播放函数
+  const forcePlay = () => {
+    // 如果已经开始播放了，就停止尝试
+    if (!video.paused) return
+
+    video.play().then(() => {
+      console.log('播放成功')
+    }).catch(() => {
+      console.log('播放被拦截，继续尝试...')
+      
+      // 核心黑科技：尝试调用微信的底层接口
+      // @ts-ignore
+      if (window.WeixinJSBridge && window.WeixinJSBridge.invoke) {
+        // @ts-ignore
+        window.WeixinJSBridge.invoke('getNetworkType', {}, () => {
+          video.play()
+        })
+      }
     })
-    hls.loadSource(videoSrc)
-    hls.attachMedia(videoPlayer.value)
-    hls.on(Hls.Events.MANIFEST_PARSED, () => {
-      // 在元数据加载后可以尝试播放，尽管您已经有 autoplay
-      videoPlayer.value?.play().catch(error => {
-        console.warn("Autoplay was prevented:", error)
-      });
-    });
-  } else if (videoPlayer.value?.canPlayType('application/vnd.apple.mpegurl')) {
-    // 这是为原生支持 HLS 的设备（如 Safari）准备的后备方案
-    videoPlayer.value.src = videoSrc;
   }
+
+  // 3. 初始化 HLS
+  const videoSrc = '../m3u8/2/output.m3u8'
+  if (Hls.isSupported()) {
+    const hls = new Hls()
+    hls.loadSource(videoSrc)
+    hls.attachMedia(video)
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      forcePlay()
+    })
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = videoSrc
+    video.addEventListener('loadedmetadata', () => {
+      forcePlay()
+    })
+  }
+
+  // ==========================================
+  // 4. 终极方案：多维度触发
+  // ==========================================
+
+  // A. 监听微信准备就绪事件
+  document.addEventListener("WeixinJSBridgeReady", forcePlay, false)
+
+  // B. 暴力轮询：每500毫秒尝试一次，直到播放为止 (防止微信事件触发过早或过晚)
+  const intervalId = setInterval(() => {
+    if (!video.paused) {
+      clearInterval(intervalId) // 播放成功后清除定时器
+    } else {
+      forcePlay()
+    }
+  }, 500)
+  
+  // 5秒后如果还在尝试，就放弃轮询，避免耗电
+  setTimeout(() => clearInterval(intervalId), 5000)
+
+  // C. 用户交互兜底：用户点击屏幕任何地方，或者滑动屏幕时，尝试播放
+  const userInteraction = () => {
+    forcePlay()
+    // 只要有一次交互，就移除监听，后面就不用管了
+    if (!video.paused) {
+      document.removeEventListener('touchstart', userInteraction)
+      document.removeEventListener('click', userInteraction)
+      document.removeEventListener('scroll', userInteraction)
+    }
+  }
+  
+  document.addEventListener('touchstart', userInteraction, { passive: true })
+  document.addEventListener('click', userInteraction)
+  
+  // 甚至用户滚动页面时也尝试触发
+  window.addEventListener('scroll', userInteraction, { once: true })
 
   const sections = document.querySelectorAll('.scroll-animate')
   sections.forEach(section => {
